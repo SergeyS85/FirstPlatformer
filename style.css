@@ -8,5 +8,8 @@ html,body{
 	overflow: hidden;
 }
 canvas{
+	background-image: url('mount_bg.png');
 	background-color: #4E667B;
+	background-size: cover;
+
 }
