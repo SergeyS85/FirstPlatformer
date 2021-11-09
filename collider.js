@@ -14,9 +14,12 @@ class Collider{
 			player.playerX = platform.platformX - player.playerW
 		}
 		if(player.headBodyPlayer){
+		   player.color = '#06A434'
+			
 			player.playerY = platform.platformY + platform.platformH
 		}
 		if(player.onground){
+			player.color = '#b6A424'
 			jump = false;
 			player.playerY = platform.platformY - player.playerH
 			player.playerY += player.gravity = 0

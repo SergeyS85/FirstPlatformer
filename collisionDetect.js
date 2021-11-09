@@ -25,11 +25,13 @@ function detectCollisionPlayer(){
 }
 function collisionRight(){
 	
-	if(player.playerX + player.playerW > platform.platformX && player.playerX < platform.platformX && player.playerY + player.playerH > platform.platformY && player.playerY < platform.platformY + platform.platformH){
+	if(player.playerX + player.playerW > platform.platformX && player.playerX < platform.platformX  && player.playerY < platform.platformY + platform.platformH && player.playerY + player.playerH > platform.platformY){
 	  rightBodyPlayer  = true;
+	  player.color = '#a514D4'
   }
   else{
 	  rightBodyPlayer  = false;
+	  player.color = '#46A4D4'
   }
 		
 }
@@ -47,10 +49,12 @@ function collisionTop(){
 	if(player.playerX + player.playerW > platform.platformX && player.playerX < platform.platformX + platform.platformW && player.playerY + player.playerH >= platform.platformY &&  player.playerY < platform.platformY ){
 			 player.jumpLength = 35
 			 jump = false	
-			 player.onground = true;		 
+			 player.onground = true;
+			 		 
 		}
 		else{
 			player.onground = false
+			player.color = '#46A4D4'
 		}
 		
 }
@@ -59,10 +63,12 @@ function collisionUnder(){
 		   player.headBodyPlayer = true
 			 player.jumpLength = 35
 			 jump = false	
-			 player.onground = true;		 
+			 player.onground = true;
+			 // player.color = '#06A434'		 
 		}
 		else{
 			player.headBodyPlayer = false
+			player.color = '#46A4D4'
 		}
 		
 }
